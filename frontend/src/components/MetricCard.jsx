@@ -2,13 +2,13 @@ import { Paper, Box, Typography, Chip } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AlertCircle, TrendingUp, TrendingDown, Minus, Info } from 'lucide-react';
 
+const TrendIcon = ({ trend }) => {
+  if (!trend || trend === 0) return <Minus size={14} />;
+  return trend > 0 ? <TrendingUp size={14} /> : <TrendingDown size={14} />;
+};
+
 function MetricCard({ title, value, unit, color, icon, trend, label = "Average", status, suggestion, statusType }) {
   const isZero = value === 0 || value === '0' || !value;
-
-  const TrendIcon = () => {
-    if (!trend || trend === 0) return <Minus size={14} />;
-    return trend > 0 ? <TrendingUp size={14} /> : <TrendingDown size={14} />;
-  };
 
   // Dynamic background based on status
   const getGradient = () => {
@@ -142,7 +142,7 @@ function MetricCard({ title, value, unit, color, icon, trend, label = "Average",
 
           {!isZero && trend !== undefined && (
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mt: 2, color: trend > 0 ? '#10b981' : '#ef4444' }}>
-              <TrendIcon />
+              <TrendIcon trend={trend} />
               <Typography variant="caption" sx={{ fontWeight: 600 }}>
                 {Math.abs(trend).toFixed(1)}% vs. last
               </Typography>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Box, Typography, Grid, Paper, ToggleButton, ToggleButtonGroup } from '@mui/material';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Activity, Heart, Droplets, Thermometer, Scale, AlertCircle
 } from 'lucide-react';
@@ -19,10 +19,6 @@ const containerVariants = {
   show: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
-};
 
 // Medical Normalization Helper
 const normalize = (val, ideal, range) => {

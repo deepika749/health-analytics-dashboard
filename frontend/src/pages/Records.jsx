@@ -20,7 +20,6 @@ function Records() {
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
-    setLoading(true);
     try {
       const res = await axios.get(`${config.API_URL}/health-data`);
       // Sort by date descending
@@ -36,6 +35,7 @@ function Records() {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchData();
   }, []);
 

@@ -3,6 +3,11 @@ const router = express.Router();
 const User = require('../models/User');
 const HealthData = require('../models/HealthData');
 
+// API root health check
+router.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'API is running' });
+});
+
 // Get user profile
 router.get('/users/profile', async (req, res) => {
   try {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, IconButton, Typography, Avatar, Menu as MuiMenu, MenuItem, Divider, Tooltip } from '@mui/material';
+import { Box, IconButton, Typography, Avatar, Menu as MuiMenu, MenuItem, Divider } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, Home, Activity, PieChart, Settings, Bell, FileText, User, LogOut } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';

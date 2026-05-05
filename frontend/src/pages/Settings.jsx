@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Typography, Paper, Switch, FormControlLabel, Slider, Divider, Button, Alert, Collapse } from '@mui/material';
+import { useState } from 'react';
+import { Box, Typography, Paper, Switch, Slider, Divider, Button, Alert, Collapse } from '@mui/material';
 import { motion } from 'framer-motion';
 import { Moon, Sun, Droplets, Bell, CheckCircle2 } from 'lucide-react';
 import { useThemeMode } from '../context/ThemeContext';

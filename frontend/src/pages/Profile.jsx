@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Typography, Paper, TextField, Button, Grid, Avatar, Divider, Chip, IconButton, InputAdornment } from '@mui/material';
 import { motion } from 'framer-motion';
 import { User, Mail, Calendar, UserCheck, Save, Camera } from 'lucide-react';
